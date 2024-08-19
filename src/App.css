@@ -1,38 +1,98 @@
+/* src/App.css */
+
+/* Set the background color for the entire app */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8; /* Light blue-gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center the app content */
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the app content */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  border-radius: 10px; /* Rounded corners for the app container */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Adjust signature canvas style */
+.signature-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffffff;
+  padding: 20px; /* Add more padding around the canvas */
+  border: 1px solid #cccccc; /* Border to visually separate from the background */
+  border-radius: 10px; /* Rounded corners */
 }
 
-.App-link {
-  color: #61dafb;
+.signature-canvas {
+  border: 2px solid #cccccc; /* Light gray border for the canvas */
+  border-radius: 5px; /* Rounded corners for the canvas */
+  width: 1000px; /* Expanded width of the canvas */
+  height: 300px; /* Expanded height of the canvas */
+  background-color: #ffffff; /* Light color background for the canvas */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  display: flex;
+  flex-wrap: wrap; /* Wrap controls to new lines if needed */
+  justify-content: center; /* Center controls horizontally */
+}
+
+.controls label {
+  margin: 0 15px; /* Adjusted margin for labels */
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.controls input[type="color"],
+.controls input[type="number"] {
+  margin-left: 5px;
+  width: 120px; /* Set a fixed width for consistency */
+  height: 30px; /* Consistent height for input elements */
+  font-size: 16px; /* Adjust font size for readability */
+}
+
+.button-container {
+  margin-top: 20px; /* Increased margin for better spacing */
+  display: flex;
+  justify-content: space-between; /* Distributes space between the buttons */
+  max-width: 1000px; /* Match the expanded width of the canvas */
+}
+
+.button-container button {
+  padding: 15px 30px; /* Larger padding for bigger buttons */
+  font-size: 18px; /* Larger font size */
+  cursor: pointer;
+  width: 200px; /* Set a larger fixed width for the buttons */
+  text-align: center;
+  border: none;
+  border-radius: 10px; /* Rounded corners for the buttons */
+  color: white; /* White text for all buttons */
+  margin: 0 10px; /* Spacing between buttons */
+}
+
+/* Red background for Clear button */
+.button-container button:nth-child(1) {
+  background-color: #ff4c4c; /* Red */
+}
+
+.button-container button:nth-child(1):hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+/* Green background for Download button */
+.button-container button:nth-child(2) {
+  background-color: #4caf50; /* Green */
+}
+
+.button-container button:nth-child(2):hover {
+  background-color: #388e3c; /* Darker green on hover */
 }
