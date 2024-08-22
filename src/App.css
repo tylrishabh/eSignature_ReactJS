@@ -3,8 +3,8 @@
 /* Set the background color for the entire app */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8; /* Light blue-gray background */
+  font-family: 'Poppins', sans-serif;
+  background-color: beige;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,84 +15,128 @@ body {
 .App {
   text-align: center;
   padding: 20px;
-  background-color: #ffffff; /* White background for the app content */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-  border-radius: 10px; /* Rounded corners for the app container */
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
-/* Adjust signature canvas style */
+/* Signature container with a fancy background */
 .signature-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
-  padding: 20px; /* Add more padding around the canvas */
-  border: 1px solid #cccccc; /* Border to visually separate from the background */
-  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* Signature canvas with a border and rounded corners */
 .signature-canvas {
-  border: 2px solid #cccccc; /* Light gray border for the canvas */
-  border-radius: 5px; /* Rounded corners for the canvas */
-  width: 1000px; /* Expanded width of the canvas */
-  height: 300px; /* Expanded height of the canvas */
-  background-color: #ffffff; /* Light color background for the canvas */
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  width: 1000px;
+  height: 300px;
+  background-color: #ffffff;
 }
 
+/* Controls for color and font size pickers */
 .controls {
-  margin-bottom: 20px; /* Increased margin for better spacing */
+  margin-bottom: 20px;
   display: flex;
-  flex-wrap: wrap; /* Wrap controls to new lines if needed */
-  justify-content: center; /* Center controls horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .controls label {
-  margin: 0 15px; /* Adjusted margin for labels */
+  margin: 0 15px;
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .controls input[type="color"],
 .controls input[type="number"] {
   margin-left: 5px;
-  width: 120px; /* Set a fixed width for consistency */
-  height: 30px; /* Consistent height for input elements */
-  font-size: 16px; /* Adjust font size for readability */
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
+.controls input[type="color"]:hover,
+.controls input[type="number"]:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container with evenly spaced buttons */
 .button-container {
-  margin-top: 20px; /* Increased margin for better spacing */
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between; /* Distributes space between the buttons */
-  max-width: 1000px; /* Match the expanded width of the canvas */
+  justify-content: space-between;
+  max-width: 1000px;
 }
 
+/* Button styling with hover effects and transitions */
 .button-container button {
-  padding: 15px 30px; /* Larger padding for bigger buttons */
-  font-size: 18px; /* Larger font size */
+  padding: 15px 30px;
+  font-size: 18px;
   cursor: pointer;
-  width: 200px; /* Set a larger fixed width for the buttons */
+  width: 200px;
   text-align: center;
   border: none;
-  border-radius: 10px; /* Rounded corners for the buttons */
-  color: white; /* White text for all buttons */
-  margin: 0 10px; /* Spacing between buttons */
+  border-radius: 50px;
+  color: white;
+  margin: 0 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Red background for Clear button */
+/* Clear button styling */
 .button-container button:nth-child(1) {
-  background-color: #ff4c4c; /* Red */
+  background-color: #ff4c4c;
 }
 
 .button-container button:nth-child(1):hover {
-  background-color: #e60000; /* Darker red on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #e60000;
 }
 
-/* Green background for Download button */
+/* Download button styling */
 .button-container button:nth-child(2) {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
 }
 
 .button-container button:nth-child(2):hover {
-  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: #388e3c;
+}
+
+/* Ensure the app is responsive */
+@media (max-width: 768px) {
+  .signature-canvas {
+    width: 100%;
+    height: 250px;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .button-container button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .controls input[type="color"],
+  .controls input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.card-background-colour{
+  background-color: bisque;
 }
